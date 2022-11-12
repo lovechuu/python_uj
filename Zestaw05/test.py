@@ -1,3 +1,6 @@
+# Marlena Gryt
+# python 2022/2023
+
 from polys import *
 import unittest
 
