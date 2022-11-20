@@ -1,5 +1,6 @@
 # Marlena Gryt
-# python 2022/2023
+# Python 2022/2023
+# Zd 5.3
 
 from polys import *
 import unittest
