@@ -1,5 +1,6 @@
 # Marlena Gryt
-# python 2022/2023
+# Python 2022/2023
+# Zd 5.3
 
 from itertools import zip_longest
 
@@ -27,7 +28,7 @@ def mul_poly(poly1, poly2):
 
 
 def is_zero(poly): 
-    return True if poly.count(0) == len(poly) else False
+    return poly.count(0) == len(poly)
 
 
 def eq_poly(poly1, poly2):    
@@ -35,7 +36,7 @@ def eq_poly(poly1, poly2):
         poly1.append(0)
     while len(poly2) < len(poly1):
         poly2.append(0)
-    return True if poly1 == poly2 else False
+    return poly1 == poly2
 
 
 def eval_poly(poly, x0):
