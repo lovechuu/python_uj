@@ -36,10 +36,10 @@ class Rectangle:
          return Rectangle(self.pt1.x + x, self.pt1.y + y, self.pt2.x + x, self.pt2.y + y)
 
     def intersection(self, other): 
-        x1 = max(min(self.pt1.x, self.pt2.x), min(other.pt1.x, other.pt2.x))
-        y1 = max(min(self.pt1.y, self.pt2.y), min(other.pt1.y, other.pt2.y))
-        x2 = min(max(self.pt1.x, self.pt2.x), max(other.pt1.x, other.pt2.x))
-        y2 = min(max(self.pt1.y, self.pt2.y), max(other.pt1.y, other.pt2.y))
+        x1 = max(self.pt1.x, other.pt1.x)
+        y1 = max(self.pt1.y, other.pt1.y)
+        x2 = min(self.pt2.x, other.pt2.x)
+        y2 = min(self.pt2.y, other.pt2.y)
         if x1 >= x2 and y1 >= y2:
             raise ValueError("No intersection")
         else:
