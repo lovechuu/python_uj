@@ -16,7 +16,7 @@ class RandomQueue:
 
     def remove(self):
         if self.is_empty():
-            raise ValueError("Kolejka jest pusta")
+            raise ValueError("Queue is empty")
         index = random.randint(0, len(self.items) - 1)
         # zamiana usuwanego elementu z elementem ostatnim 
         self.items[index], self.items[-1] = self.items[-1], self.items[index]
