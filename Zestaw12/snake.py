@@ -49,12 +49,10 @@ snake_body = [[100, 250]]
 # set food starting position
 food_pos = [random.randrange(1, (window_size[0]// 10))*10, random.randrange(1, (window_size[1]//10))*10]
 food_spawn = True
-food_timer = pygame.time.get_ticks()
 food_type = "good"
 
 score = 0
 snake_size = 1
-game_timer = pygame.time.get_ticks()
 direction = 'RIGHT'
 new_direction = direction
 
@@ -81,7 +79,10 @@ while not playing:
     start_message_rect.midtop = (window_size[0]*0.5, window_size[1]*0.65)
     screen.blit(start_message_surface, start_message_rect)
     pygame.display.update()
-
+    
+game_timer = pygame.time.get_ticks()
+food_timer = pygame.time.get_ticks()
+    
 # game loop
 while True:
     # check if the game time has expired
