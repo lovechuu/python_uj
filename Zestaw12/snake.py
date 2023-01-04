@@ -42,20 +42,6 @@ screen = pygame.display.set_mode(window_size, pygame.HWSURFACE | pygame.DOUBLEBU
 pygame.display.set_caption("Snake")
 frame_rate = pygame.time.Clock()
 
-# set snake starting position
-snake_pos = [100, 250]
-snake_body = [[100, 250]]
-
-# set food starting position
-food_pos = [random.randrange(1, (window_size[0]// 10))*10, random.randrange(1, (window_size[1]//10))*10]
-food_spawn = True
-food_type = "good"
-
-score = 0
-snake_size = 1
-direction = 'RIGHT'
-new_direction = direction
-
 playing = False
 while not playing:
     # check for enter or quit
@@ -80,6 +66,21 @@ while not playing:
     screen.blit(start_message_surface, start_message_rect)
     pygame.display.update()
     
+# set snake starting position
+snake_pos = [100, 250]
+snake_body = [[100, 250]]
+
+# set food starting position
+food_pos = [random.randrange(1, (window_size[0]// 10))*10, random.randrange(1, (window_size[1]//10))*10]
+food_spawn = True
+food_type = "good"
+
+score = 0
+snake_size = 1
+direction = 'RIGHT'
+new_direction = direction
+
+# set timers
 game_timer = pygame.time.get_ticks()
 food_timer = pygame.time.get_ticks()
     
